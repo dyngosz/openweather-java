@@ -1,6 +1,8 @@
 package com.spring.service;
+
 import org.json.JSONException;
-import org.json.JSONObject;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
@@ -23,7 +25,6 @@ public class JsonWeatherParser {
         JSONObject mainArray = (JSONObject) mainJsonObj.get("main");
         JSONObject cloudsArray = (JSONObject) mainJsonObj.get("clouds");
         JSONObject sysArray = (JSONObject) mainJsonObj.get("sys");
-        JSONObject weatherArray = (JSONObject) mainJsonObj.get("weather");
 
         weather.setTemperature(getTemperatureDescription(mainArray));
         

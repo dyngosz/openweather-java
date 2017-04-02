@@ -12,9 +12,11 @@ import java.util.Properties;
 
 import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
 
 import com.spring.domain.Weather;
 
+@Service
 public class WeatherServiceImpl implements WeatherService{
 
 	@Value("${app.id:89d42bb4fd3fcf3689611dad9a240353}")
@@ -23,7 +25,8 @@ public class WeatherServiceImpl implements WeatherService{
 
     @Override
     public Weather getCurrentWeather(String city) throws IOException, ParseException, JSONException, org.json.simple.parser.ParseException {
-        return getWeatherFromJson(getJsonFromServer(city));
+        System.out.println("COS");
+    	return getWeatherFromJson(getJsonFromServer(city));
     }
 
     private Weather getWeatherFromJson(String json) throws ParseException, org.json.simple.parser.ParseException, JSONException {
