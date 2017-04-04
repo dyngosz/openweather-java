@@ -31,7 +31,7 @@ public class JsonWeatherParser {
 		/* Parsing JSONArray */
 		JSONArray weatherArray = (JSONArray) mainJsonObj.get("weather");
 		Iterator<JSONObject> i = weatherArray.iterator();
-
+		
 		while (i.hasNext()) {
 			JSONObject arrayValue = (JSONObject) i.next();
 			String description = (String) arrayValue.get("description");
