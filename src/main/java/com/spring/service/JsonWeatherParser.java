@@ -48,14 +48,14 @@ public class JsonWeatherParser {
 		try {
 			/* Get date, sunrise and sunset times from unix epoch values */
 			Long sunrise = Long.parseLong(getJsonLongObjectDescription(sysArray, "sunrise"));
-			String sunriseTime = new java.text.SimpleDateFormat("HH:mm:ss")
+			String sunriseTime = new java.text.SimpleDateFormat("HH:mm")
 					.format(new java.util.Date(sunrise * 1000));
 			
 			String today = new java.text.SimpleDateFormat("MM/dd/yyyy")
 					.format(new java.util.Date(sunrise * 1000));
 			
 			Long sunset = Long.parseLong(getJsonLongObjectDescription(sysArray, "sunset"));
-			String sunsetTime = new java.text.SimpleDateFormat("HH:mm:ss")
+			String sunsetTime = new java.text.SimpleDateFormat("HH:mm")
 					.format(new java.util.Date(sunset * 1000));
 			
 			weather.setSunriseTime(sunriseTime);

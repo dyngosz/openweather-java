@@ -6,11 +6,26 @@
 
 .jumbotron {
   position: absolute;
-  top: 30%;
+  top: 25%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+.jumbotron2 {
+  position: absolute;
+  top: 75%;
   left:50%;
   transform: translate(-50%,-50%);
 }
 
-body,div {
+body,div,ul,li {
 	background: #B2DFDB !important;
+}
+
+li.borderless-city {
+  border-top: 0 none;
+  border-bottom: 0 none;
+  border-left: 0 none;
+  border-right: 0 none;
+  padding: 0.5em 2em 0.5em 4em;
+  
 }
