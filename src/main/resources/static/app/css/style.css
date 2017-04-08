@@ -8,14 +8,15 @@
   position: absolute;
   top: 25%;
   left:50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%,-40%);
 }
 .jumbotron2 {
   position: absolute;
-  top: 75%;
+  top: 72%;
   left:50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%,-40%);
 }
+
 
 body,div,ul,li {
 	background: #B2DFDB !important;
@@ -27,5 +28,36 @@ li.borderless-city {
   border-left: 0 none;
   border-right: 0 none;
   padding: 0.5em 2em 0.5em 4em;
-  
+}
+
+.table td{
+    border: #B2DFDB solid 1px !important;
+}
+
+footer {  
+   bottom : 2px;  
+   height : 10px;  
+   margin-top : 40px;  
+   text-align: center;  
+   position:fixed;
+   width:100%;
+}
+
+p.copyright {
+	position: absolute;
+	right:10%;
+	width: 100%;
+    line-height: 10px;
+    font-size: 0.7em;
+	text-align: center;
+	bottom:0;
+}
+p.links {
+	position: absolute;
+	right:2%;
+	width: 100%;
+    line-height: 10px;
+    font-size: 0.8em;
+	text-align: center;
+	bottom:0;
 }

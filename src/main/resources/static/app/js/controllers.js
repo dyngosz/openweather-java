@@ -397,7 +397,6 @@
 								var prefix = 'wi wi-';
 								var code = angular
 										.fromJson(response.data.weatherID)
-
 								var today = new Date();
 								var hour = today.getHours();
 								var dayCycle = "";
@@ -410,10 +409,16 @@
 									// Night time
 									dayCycle = "night-";
 								}
-
+								
+								
 								var icon = weatherList[code].icon;
+								
 								icon = prefix + dayCycle + icon;
 								$scope.weatherIcon = icon;
+								
+								if (dayCycle == "night-" && code == "800"){
+									$scope.weatherIcon = "wi wi-night-clear";
+								}
 
 								$scope.value = weatherList[code].icon;
 								$scope.code = angular

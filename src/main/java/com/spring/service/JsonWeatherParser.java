@@ -41,8 +41,8 @@ public class JsonWeatherParser {
 		}
 
 		weather.setTemperature(getTemperatureDescription(mainConditionsArray));
-		weather.setHumidity(getJsonNumericObjectDescription(mainConditionsArray, "humidity"));
-		weather.setPressure(getJsonNumericObjectDescription(mainConditionsArray, "pressure"));
+		weather.setHumidity(getJsonIntegerObjectDescription(mainConditionsArray, "humidity"));
+		weather.setPressure(getJsonIntegerObjectDescription	(mainConditionsArray, "pressure"));
 		weather.setCity(String.valueOf(mainJsonObj.get("name")));
 
 		try {
@@ -74,9 +74,9 @@ public class JsonWeatherParser {
 		Double temp = new Double(jsonObject.get("temp").toString());
 		return (temp > 0 ? "+" : "") + String.valueOf(Math.round(temp));
 	}
-
-	private String getJsonNumericObjectDescription(JSONObject jsonObject, String valueName) {
-		Double jsonValue = new Double(jsonObject.get(valueName).toString());
+	
+	private String getJsonIntegerObjectDescription(JSONObject jsonObject, String valueName) {
+		int jsonValue = new Integer(jsonObject.get(valueName).toString());
 		return String.valueOf(jsonValue);
 	}
 	

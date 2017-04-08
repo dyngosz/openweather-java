@@ -21,44 +21,58 @@
 
 	<div class="container theme-showcase" role="main">
 		<div class="jumbotron">
-			<i ng-class="weatherIcon" style="font-size: 16em;"></i>
+			<i ng-class="weatherIcon" style="font-size: 12em;"></i>
 		</div>
 		<div class="jumbotron2">
 			<ul class="list-group">
-				<li class="list-group-item borderless-city"><h2>{{weather.city}}</h3></li>
+				<li class="list-group-item borderless-city"><h3>{{weather.city}}</h3></li>
 			</ul>
-		<table class="table">
-    <tbody>
-      <tr>
-        <td>Temperature</td>
-        <td></td>
-        <td>{{weather.temperature}} &#8451</td>
-      </tr>
-      <tr>
-        <td>Pressure</td>
-        <td></td>
-        <td>{{weather.pressure}} hPa</td>
-      </tr>
-      <tr>
-        <td>Humidity</td>
-        <td></td>
-        <td>{{weather.humidity}}</td>
-      </tr>
-      <tr>
-        <td>Sunrise</td>
-        <td></td>
-        <td>{{weather.sunriseTime}}</td>
-      </tr>
-      <tr>
-        <td>Sunset</td>
-        <td></td>
-        <td>{{weather.sunsetTime}}</td>
-      </tr>
-    </tbody>
-  </table>	
+			<table class="table">
+				<tbody>
+					<tr>
+						<td>Temperature</td>
+						<td></td>
+						<td>{{weather.temperature}} &#8451</td>
+					</tr>
+					<tr>
+						<td>Pressure</td>
+						<td></td>
+						<td>{{weather.pressure}} hPa</td>
+					</tr>
+					<tr>
+						<td>Humidity</td>
+						<td></td>
+						<td>{{weather.humidity}}%</td>
+					</tr>
+					<tr>
+						<td>Sunrise</td>
+						<td></td>
+						<td>{{weather.sunriseTime}}</td>
+					</tr>
+					<tr>
+						<td>Sunset</td>
+						<td></td>
+						<td>{{weather.sunsetTime}}</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 
 	</div>
+
+
 </body>
+<footer>
+	<p class="copyright">© Wiktor Dyngosz 2017</p>
+	<p class="links">
+	<a href="https://www.linkedin.com/in/wiktor-dyngosz-aa09a298/">
+      		<i class="fa fa-linkedin"></i> 
+    	</a>
+    	<a class="sidebar-nav-item" href="https://github.com/dyngosz">
+      		<i class="fa fa-github"></i> 
+	    </a></p>
+	
+</footer>
+
 
 </html>
