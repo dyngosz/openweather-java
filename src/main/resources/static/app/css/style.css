@@ -1,7 +1,6 @@
 .container {
   position: relative;
-  height: 38rem;
-  
+  height: 38rem;  
 }
 
 .jumbotron {
@@ -17,8 +16,16 @@
   transform: translate(-50%,-40%);
 }
 
+body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: #B2DFDB !important;
+}
 
-body,div,ul,li {
+div,ul,li {
 	background: #B2DFDB !important;
 }
 
@@ -35,17 +42,17 @@ li.borderless-city {
 }
 
 footer {  
-   bottom : 2px;  
-   height : 10px;  
-   margin-top : 40px;  
+   bottom : -60px;  
+   height : 1px;  
+   margin-top : 20px;  
    text-align: center;  
-   position:fixed;
+   position:absolute;
    width:100%;
 }
 
 p.copyright {
 	position: absolute;
-	right: 8%;
+	right: 3%;
 	width: 100%;
     line-height: 10px;
     font-size: 0.9em;
